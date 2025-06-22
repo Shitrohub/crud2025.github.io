@@ -1,0 +1,50 @@
+ERROR - 2025-04-15 00:22:57 --> mysqli_sql_exception: Column 'usuario' cannot be null in /Applications/MAMP/htdocs/crud2025/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Applications/MAMP/htdocs/crud2025/system/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO use...', 0)
+#1 /Applications/MAMP/htdocs/crud2025/system/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO use...')
+#2 /Applications/MAMP/htdocs/crud2025/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO use...')
+#3 /Applications/MAMP/htdocs/crud2025/app/Models/Modelo.php(28): CodeIgniter\Database\BaseConnection->query('INSERT INTO use...', Array)
+#4 /Applications/MAMP/htdocs/crud2025/app/Controllers/Home.php(60): App\Models\Modelo->agregaruser(NULL, NULL)
+#5 /Applications/MAMP/htdocs/crud2025/system/CodeIgniter.php(933): App\Controllers\Home->agregarusuario()
+#6 /Applications/MAMP/htdocs/crud2025/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /Applications/MAMP/htdocs/crud2025/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/crud2025/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/crud2025/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/crud2025/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-04-15 00:22:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'usuario' cannot be null
+[Method: GET, Route: agregarusuario]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 APPPATH/Models/Modelo.php(28): CodeIgniter\Database\BaseConnection->query('INSERT INTO users (usuario, clave) VALUES (?, ?)', [...])
+ 2 APPPATH/Controllers/Home.php(60): App\Models\Modelo->agregaruser(null, null)
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->agregarusuario()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-15 00:22:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'usuario' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 332.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO users (usuario, clave) VALUES (NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO users (usuario, clave) VALUES (NULL, NULL)')
+ 3 APPPATH/Models/Modelo.php(28): CodeIgniter\Database\BaseConnection->query('INSERT INTO users (usuario, clave) VALUES (?, ?)', [...])
+ 4 APPPATH/Controllers/Home.php(60): App\Models\Modelo->agregaruser(null, null)
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->agregarusuario()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-15 00:22:57 --> [Caused by] mysqli_sql_exception: Column 'usuario' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 327.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(327): mysqli->query('INSERT INTO users (usuario, clave) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO users (usuario, clave) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO users (usuario, clave) VALUES (NULL, NULL)')
+ 4 APPPATH/Models/Modelo.php(28): CodeIgniter\Database\BaseConnection->query('INSERT INTO users (usuario, clave) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Home.php(60): App\Models\Modelo->agregaruser(null, null)
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->agregarusuario()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

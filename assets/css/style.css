@@ -1,0 +1,39 @@
+.login-page {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100vh;
+}
+.card {
+    border: none;
+    border-radius: 1rem;
+}
+.form-control {
+    border-radius: 0.5rem;
+}
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+
+
+.welcome-page {
+    padding-top: 70px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.welcome-box {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+}
